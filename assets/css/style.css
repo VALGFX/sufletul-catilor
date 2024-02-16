@@ -10,11 +10,9 @@
 
 /* Page body styles */
 body {
-  body {
+ 
     background: linear-gradient(rgba(25, 29, 35, 0.9), rgba(25, 29, 35, 0.9)), url("/assets/images/background-image.png") fixed center no-repeat;
     background-size: cover;
-}
-
 }
 
 .navigation ion-icon {
