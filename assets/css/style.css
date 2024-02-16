@@ -10,7 +10,7 @@
 
 /* Page body styles */
 body {
-   background: linear-gradient(rgba(25, 29, 35, 0.8), rgba(25, 29, 35, 0.8)),
+   background: linear-gradient(rgba(25, 29, 35, 0.7), rgba(25, 29, 35, 0.7)),
       url("/assets/image/background-image.png");
     background-position: center;
     background-size: cover;
