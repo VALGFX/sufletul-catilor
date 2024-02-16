@@ -171,6 +171,11 @@ footer {
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    body {
+ 
+    background: linear-gradient(rgba(25, 29, 35, 0.85), rgba(25, 29, 35, 0.85)), url("/assets/images/background-image.png") fixed center no-repeat;
+    background-size: cover;
+}
     .navigation {
         display: block;
         justify-content: space-between;
@@ -325,9 +330,9 @@ footer {
 }
 
 @media only screen and (min-width: 500px) and (max-width: 768px) {
-    body {
+   body {
+    background: linear-gradient(rgba(25, 29, 35, 0.85), rgba(25, 29, 35, 0.85)), url("/assets/images/background-image.png") fixed center no-repeat;
     background-size: cover;
-    background: url("/assets/images/background-image.png") fixed center no-repeat;
 }
     .navigation {
         display: flex;
@@ -466,9 +471,10 @@ footer {
 }
 
 @media only screen and (max-width: 500px) {
-    body {
+   body {
+ 
+    background: linear-gradient(rgba(25, 29, 35, 0.85), rgba(25, 29, 35, 0.85)), url("/assets/images/background-image.png") fixed center no-repeat;
     background-size: cover;
-    background: url("/assets/images/background-image.png") fixed center no-repeat;
 }
     .navigation {
         display: flex;
