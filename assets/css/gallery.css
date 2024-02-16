@@ -92,7 +92,7 @@ footer {
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-    body {
+  body {
     background-size: cover;
     background: url("/assets/images/background-image.png") fixed center no-repeat;
 }
@@ -185,7 +185,7 @@ footer {
 }
 
 @media only screen and (max-width: 500px) {
-    body {
+   body {
     background-size: cover;
     background: url("/assets/images/background-image.png") fixed center no-repeat;
 }
