@@ -87,6 +87,10 @@ footer {
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    body {
+    background-size: cover;
+    background: url("/assets/images/background-image.png") fixed center no-repeat;
+}
     .gallery-title h1 {
         font-size: 30px;
         font-weight: 700;
@@ -102,6 +106,10 @@ footer {
 }
 
 @media only screen and (min-width: 500px) and (max-width: 768px) {
+    body {
+    background-size: cover;
+    background: url("/assets/images/background-image.png") fixed center no-repeat;
+}
     .gallery-title h1 {
         font-size: 30px;
         font-weight: 700;
@@ -172,6 +180,10 @@ footer {
 }
 
 @media only screen and (max-width: 500px) {
+    body {
+    background-size: cover;
+    background: url("/assets/images/background-image.png") fixed center no-repeat;
+}
     .gallery-title h1 {
         font-size: 20px;
         font-weight: 700;
