@@ -1,0 +1,271 @@
+.entertaiment {
+    margin-top: 70px;
+}
+
+.entertaiment .entertaiment-title p {
+    text-align: center;
+    color: #D9D9D9;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.entertaiment .entertaiment-title h2 {
+    text-align: center;
+    color: #D9D9D9;
+    font-family: "Montserrat", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.entertaiment-sortation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 36px auto 0 auto;
+    width: 70%;
+}
+
+.entertaiment-sortation .title {
+    color: #D9D9D9;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    text-decoration: none;
+}
+
+.entertaiment-sortation .entertainment-sortation-category {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #D9D9D9;
+    gap: 40px;
+}
+
+.entertaiment-sortation .entertainment-sortation-category ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 45px;
+}
+
+.entertaiment-sortation .entertainment-sortation-category ul li {
+    list-style: none;
+    color: #D9D9D9;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    text-decoration: none;
+}
+
+.entertaiment-sortation .entertainment-sortation-category ul li .subcategories {
+    display: none; /* Ascundeți subcategoriile inițial */
+    position: absolute;
+    background-color: #191d23;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin: 0;
+    border-radius: 10px;
+    z-index: 1; /* Plasează subcategoriile la mijloc */
+    transform: translateX(-30%);
+}
+
+.entertaiment-sortation .entertainment-sortation-category ul li:hover .subcategories {
+    display: block; /* Afișați subcategoriile când peste elementul părinte */
+}
+
+.entertaiment-sortation .entertainment-sortation-category ul li:hover .subcategories li:hover {
+    color: #F94550;
+}
+
+#items-section {
+    width: 80%;
+    margin: 45px auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#items-section img {
+    width: 200px;
+    height: 300px;
+    border-radius: 5px;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .entertaiment .entertaiment-title p {
+        text-align: center;
+        color: #D9D9D9;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 150%;
+    }
+
+    .entertaiment .entertaiment-title h2 {
+        text-align: center;
+        color: #D9D9D9;
+        font-family: "Montserrat", sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 150%;
+    }
+
+    .entertaiment-sortation {
+        width: 65%;
+    }
+
+    #items-section img {
+        width: 150px;
+        height: 250px;
+        border-radius: 5px;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 768px) {
+    .entertaiment .entertaiment-title p {
+        text-align: center;
+        color: #D9D9D9;
+        font-family: "Montserrat", sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 150%;
+        max-width: 80%;
+        margin: 10px auto 0 auto;
+    }
+
+    .entertaiment .entertaiment-title h2 {
+        text-align: center;
+        color: #D9D9D9;
+        font-family: "Montserrat", sans-serif;
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 150%;
+    }
+
+    .entertaiment-sortation {
+        width: 65%;
+        display: flex;
+        flex-direction: column; /* Setăm direcția flex la coloană */
+    }
+
+    #items-section img {
+        width: 150px;
+        height: 250px;
+        border-radius: 5px;
+    }
+
+    .entertaiment-sortation .title {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+        text-decoration: none;
+    }
+
+    .entertaiment-sortation .entertainment-sortation-category {
+        display: flex;
+        flex-direction: column; /* Setăm direcția flex la coloană */
+        justify-content: center;
+        align-items: center;
+        color: #D9D9D9;
+        gap: 45px;
+        margin: 10px auto 0 auto;
+    }
+
+    .entertaiment-sortation .entertainment-sortation-category ul {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 45px;
+    }
+
+    .entertaiment-sortation .entertainment-sortation-category ul li {
+        list-style: none;
+        color: #D9D9D9;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        text-decoration: none;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    .entertaiment .entertaiment-title p {
+        text-align: center;
+        color: #D9D9D9;
+        font-family: "Montserrat", sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 150%;
+        max-width: 80%;
+        margin: 10px auto 0 auto;
+    }
+
+    .entertaiment .entertaiment-title h2 {
+        text-align: center;
+        color: #D9D9D9;
+        font-family: "Montserrat", sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 150%;
+    }
+
+    .entertaiment-sortation {
+        width: 65%;
+        display: flex;
+        flex-direction: column; /* Setăm direcția flex la coloană */
+    }
+
+    #items-section img {
+        width: 200px;
+        height: 300px;
+        border-radius: 5px;
+    }
+
+    .entertaiment-sortation .title {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+        text-decoration: none;
+    }
+
+    .entertaiment-sortation .entertainment-sortation-category {
+        display: flex;
+        flex-direction: column; /* Setăm direcția flex la coloană */
+        justify-content: center;
+        align-items: center;
+        color: #D9D9D9;
+        gap: 45px;
+        margin: 10px auto 0 auto;
+    }
+
+    .entertaiment-sortation .entertainment-sortation-category ul {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 20px;
+    }
+
+    .entertaiment-sortation .entertainment-sortation-category ul li {
+        list-style: none;
+        color: #D9D9D9;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        text-decoration: none;
+    }
+
+}

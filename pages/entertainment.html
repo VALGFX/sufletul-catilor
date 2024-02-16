@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Page Title -->
+    <title>Sufletul cărților</title>
+    <!-- Set character set and configure view for mobile devices -->
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- Setting the favicon for the site -->
+    <link href="/assets/images/Favicon.jpg" rel="icon" type="image/png"/>
+    <!-- Connect an external CSS style file -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/gallery.css" rel="stylesheet">
+    <link href="/assets/css/entertainment.css" rel="stylesheet">
+</head>
+<body>
+<!-- Site navigation bar -->
+<nav class="navigation">
+    <!-- Navigation logo section -->
+    <div class="nav-logo">
+        <img alt="" src="/assets/images/Logo.png">
+    </div>
+    <!-- Section for navigation links -->
+    <div class="nav-links">
+        <ion-icon class="close-outline" class="close" name="close-outline" onclick="hideMenu()"></ion-icon>
+        <ul>
+            <!-- List items for each page of the site -->
+            <li class="list">
+                <a href="/index.html">Acasă</a>
+            </li>
+            <li class="list">
+                <a href="/pages/gallery.html">Galerie</a>
+            </li>
+            <li class="list">
+                <a href="#">Activități</a>
+            </li>
+            <li class="list">
+                <a class="active" href="#">Cărți | Filme | seriale</a>
+            </li>
+        </ul>
+    </div>
+    <ion-icon class="open" name="menu-outline" onclick="showMenu()"></ion-icon>
+</nav>
+<section class="entertaiment">
+    <div class="entertaiment-title">
+        <h2>
+            Momentan de Comuniune
+        </h2>
+        <p>O colecție de amintiri capturate, reflectând clipe de bucurie și conexiuni autentice <br> în cadrul grupului
+            nostru creativ. Descoperă poveștile noastre în imagini.</p>
+    </div>
+    <div class="entertaiment-sortation">
+        <div class="title">Bibliotecă Digitală</div>
+        <div class="entertainment-sortation-category">
+            <ul>
+                <li onclick="filterItems('toate')">Toate</li>
+                <li onclick="toggleSubcategories('carti')">Cărți
+                    <ul class="subcategories" id="carti-subcategories">
+                        <li onclick="filterItems('c_romane')">Românești</li>
+                        <li onclick="filterItems('c_universale')">Universale</li>
+                    </ul>
+                </li>
+                <li onclick="toggleSubcategories('filme')">Filme
+                    <ul class="subcategories" id="filme-subcategories">
+                        <li onclick="filterItems('f_romane')">Românești</li>
+                        <li onclick="filterItems('f_universale')">Universale</li>
+                    </ul>
+                </li>
+                <li onclick="toggleSubcategories('seriale')">Seriale
+                    <ul class="subcategories" id="seriale-subcategories">
+                        <li onclick="filterItems('s_romane')">Românești</li>
+                        <li onclick="filterItems('s_universale')">Universale</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="items-section"></div>
+</section>
+<footer>© 2024 Sufletul cărților. Toate drepturile rezervate.</footer>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/menu.js"></script>
+<script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" type="module"></script>
+<script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" type="nomodule"></script>
+</body>
+</html>
