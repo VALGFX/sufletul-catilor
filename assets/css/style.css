@@ -11,7 +11,7 @@
 /* Page body styles */
 body {
  
-    background: linear-gradient(rgba(25, 29, 35, 0.9), rgba(25, 29, 35, 0.9)), url("/assets/images/background-image.png") fixed center no-repeat;
+    background: linear-gradient(rgba(25, 29, 35, 0.85), rgba(25, 29, 35, 0.85)), url("/assets/images/background-image.png") fixed center no-repeat;
     background-size: cover;
 }
 
