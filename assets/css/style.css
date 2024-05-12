@@ -1,0 +1,618 @@
+/* Importing weight variants 400, 600 and 700 of Montserrat font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* Reset and configure all */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page body styles */
+body {
+ 
+    background: linear-gradient(rgba(25, 29, 35, 0.85), rgba(25, 29, 35, 0.85)), url("/assets/images/background-image.png") fixed center no-repeat;
+    background-size: cover;
+}
+
+.navigation ion-icon {
+    display: none;
+}
+
+.navigation .nav-links .close {
+    margin: 10px 0 0 10px;
+}
+
+.navigation .open {
+    margin: 10px 10px 0 auto;
+}
+
+/* Page navigation styles */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 36px auto 0 auto;
+    width: 80%;
+}
+
+.navigation .nav-logo,
+.navigation .nav-links {
+    display: flex;
+}
+
+/* Styles for navigation links */
+.nav-links {
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.nav-links ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 45px;
+}
+
+.nav-links ul li {
+    list-style: none;
+}
+
+.nav-links ul .active {
+    color: #F94550;
+}
+
+.nav-links ul li a {
+    color: #D9D9D9;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    text-decoration: none;
+}
+
+.nav-links ul li::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #F94550;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+/* Page hero-section styles */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 200px auto 0 auto;
+    gap: 40px;
+}
+
+/* Styles for titles and subtitles */
+
+
+.title h1 {
+    color: #D9D9D9;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%; /* 50px */
+}
+
+.title h1::After {
+    content: ''; /* Adăugați acest pseudo-element doar pentru a afișa stilurile */
+    display: flex;
+    padding: 15px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid #D9D9D9;
+}
+
+
+.sub-title {
+    color: rgba(217, 217, 217, 0.80);
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 27px */
+}
+
+/* Styles for buttons */
+.button {
+    display: flex;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    border: 1px solid #D9D9D9;
+}
+
+.button a {
+    color: #D9D9D9;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 27px */
+    text-decoration: none;
+}
+
+.button:hover {
+    background: #F94550;
+    transition: 1s;
+    border: 1px solid #F94550;
+}
+
+/* Styles for footer */
+footer {
+    color: #DEDCDC;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    margin: 150px auto 36px auto;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    body {
+ 
+    background: linear-gradient(rgba(25, 29, 35, 0.85), rgba(25, 29, 35, 0.85)), url("/assets/images/background-image.png") fixed center no-repeat;
+    background-size: cover;
+}
+    .navigation {
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+        margin: 36px auto 0 auto;
+        width: 80%;
+    }
+
+    .navigation .nav-logo,
+    .navigation .nav-links {
+        display: flex;
+    }
+
+    .navigation .nav-logo {
+        display: flex; /* Utilizăm flexbox pentru a centra imaginea */
+        justify-content: center; /* Centrăm imaginea pe orizontală */
+        align-items: center; /* Centrăm imaginea pe verticală */
+    }
+
+    .navigation .nav-logo img {
+        max-width: 100%; /* Asigurăm că imaginea nu depășește lățimea containerului */
+        height: auto; /* Permite imaginii să-și mențină proporțiile */
+    }
+
+    /* Styles for navigation links */
+    .nav-links {
+        flex-direction: column;
+        justify-content: center;
+        margin-left: auto;
+    }
+
+    .nav-links ul {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 30px;
+        gap: 20px;
+    }
+
+    .nav-links ul li {
+        list-style: none;
+    }
+
+    .nav-links ul .active {
+        color: #F94550;
+    }
+
+    .nav-links ul li a {
+        color: #D9D9D9;
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        text-decoration: none;
+    }
+
+    .nav-links ul li::after {
+        content: "";
+        width: 0;
+        height: 2px;
+        background: #F94550;
+        display: block;
+        margin: auto;
+        transition: 0.5s;
+    }
+
+    .nav-links ul li:hover::after {
+        width: 100%;
+    }
+
+    /* Page hero-section styles */
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 200px auto 0 auto;
+        gap: 40px;
+    }
+
+    /* Styles for titles and subtitles */
+    .title h1 {
+        color: #D9D9D9;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 125%; /* 50px */
+    }
+
+    .title h1::After {
+        content: ''; /* Adăugați acest pseudo-element doar pentru a afișa stilurile */
+        display: flex;
+        padding: 15px 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 5px solid #D9D9D9;
+    }
+
+
+    .sub-title {
+        color: rgba(217, 217, 217, 0.80);
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 27px */
+    }
+
+    /* Styles for buttons */
+    .button {
+        display: flex;
+        padding: 16px 32px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 10px;
+        border: 1px solid #D9D9D9;
+    }
+
+    .button a {
+        color: #D9D9D9;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 27px */
+        text-decoration: none;
+    }
+
+    .button:hover {
+        background: #F94550;
+        transition: 1s;
+        border: 1px solid #F94550;
+    }
+
+    /* Styles for footer */
+    footer {
+        color: #DEDCDC;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        margin: 150px auto 36px auto;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 768px) {
+   body {
+    background: linear-gradient(rgba(25, 29, 35, 0.85), rgba(25, 29, 35, 0.85)), url("/assets/images/background-image.png") fixed center no-repeat;
+    background-size: cover;
+}
+    .navigation {
+        display: flex;
+    }
+
+    .navigation .menu-logo {
+        display: flex;
+        width: 100%;
+        height: 70px;
+        margin: 20px 0;
+        justify-content: start;
+    }
+
+    .navigation .menu-logo img {
+        height: 100px;
+        margin: -40px 0;
+    }
+
+    .navigation .nav-links {
+        display: flex;
+        position: fixed;
+        background: linear-gradient(rgba(25, 29, 35, 0.7), rgba(25, 29, 35, 0.7));
+        width: 200px;
+        height: 100%;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 1;
+        transition: 1s;
+    }
+
+    .navigation .nav-links ul {
+        margin: 25vh 0;
+        display: flex;
+        flex-direction: column; /* Afișează elementele unul sub altul */
+    }
+
+    .navigation .nav-links ul li {
+        display: block;
+        text-align: center;
+        margin: -5px 0; /* Modificați marginea pentru a crea spațiul între elemente */
+    }
+
+    .navigation .nav-links ul li a {
+        text-decoration: none;
+        color: #dedcdc;
+    }
+
+    .navigation ion-icon {
+        display: block;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        color: #dedcdc;
+    }
+
+    .navigation .nav-links .close {
+        margin: 10px 0 0 -20px; /* Păstrați marginile stânga, dreapta și jos neschimbate */
+        margin: 10px 0 0 20px; /* Aplicați o margine negativă pentru a muta .close mai sus */
+    }
+
+    .navigation .open {
+        margin: 10px 10px 0 auto;
+    }
+
+    .title h1 {
+        color: #D9D9D9;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 125%; /* 50px */
+    }
+
+    .title h1::After {
+        content: ''; /* Adăugați acest pseudo-element doar pentru a afișa stilurile */
+        display: flex;
+        padding: 10px 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 5px solid #D9D9D9;
+    }
+
+
+    .sub-title {
+        color: rgba(217, 217, 217, 0.80);
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 27px */
+    }
+
+    /* Styles for buttons */
+    .button {
+        display: flex;
+        padding: 16px 32px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 10px;
+        border: 1px solid #D9D9D9;
+    }
+
+    .button a {
+        color: #D9D9D9;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 27px */
+        text-decoration: none;
+    }
+
+    .button:hover {
+        background: #F94550;
+        transition: 1s;
+        border: 1px solid #F94550;
+    }
+
+    /* Styles for footer */
+    footer {
+        color: #DEDCDC;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        margin: 150px auto 36px auto;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+   body {
+ 
+    background: linear-gradient(rgba(25, 29, 35, 0.85), rgba(25, 29, 35, 0.85)), url("/assets/images/background-image.png") fixed center no-repeat;
+    background-size: cover;
+}
+    .navigation {
+        display: flex;
+    }
+
+    .navigation .menu-logo {
+        display: flex;
+        width: 100%;
+        height: 70px;
+        margin: 20px 0;
+        justify-content: start;
+    }
+
+    .navigation .menu-logo img {
+        height: 100px;
+        margin: -40px 0;
+    }
+
+    .navigation .nav-links {
+        display: flex;
+        position: fixed;
+        background: linear-gradient(rgba(25, 29, 35, 0.7), rgba(25, 29, 35, 0.7));
+        width: 200px;
+        height: 100%;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 1;
+        transition: 1s;
+    }
+
+    .navigation .nav-links ul {
+        margin: 25vh 0;
+        display: flex;
+        flex-direction: column; /* Afișează elementele unul sub altul */
+    }
+
+    .navigation .nav-links ul li {
+        display: block;
+        text-align: center;
+        margin: -5px 0; /* Modificați marginea pentru a crea spațiul între elemente */
+    }
+
+    .navigation .nav-links ul li a {
+        text-decoration: none;
+        color: #dedcdc;
+    }
+
+    .navigation ion-icon {
+        display: block;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        color: #dedcdc;
+    }
+
+    .navigation .nav-links .close {
+        margin: 10px 0 0 -20px; /* Păstrați marginile stânga, dreapta și jos neschimbate */
+        margin: 10px 0 0 20px; /* Aplicați o margine negativă pentru a muta .close mai sus */
+    }
+
+    .navigation .open {
+        margin: 10px 10px 0 auto;
+    }
+
+    .title h1 {
+        color: #D9D9D9;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 125%; /* 50px */
+    }
+
+    .title h1::After {
+        content: ''; /* Adăugați acest pseudo-element doar pentru a afișa stilurile */
+        display: flex;
+        padding: 8px 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 3px solid #D9D9D9;
+    }
+
+    br {
+        display: none;
+    }
+
+    .sub-title {
+        color: rgba(217, 217, 217, 0.80);
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 27px */
+        max-width: 80%;
+    }
+
+    /* Styles for buttons */
+    .button {
+        display: flex;
+        padding: 16px 32px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 10px;
+        border: 1px solid #D9D9D9;
+    }
+
+    .button a {
+        color: #D9D9D9;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 27px */
+        text-decoration: none;
+    }
+
+    .button:hover {
+        background: #F94550;
+        transition: 1s;
+        border: 1px solid #F94550;
+    }
+
+    /* Styles for footer */
+    footer {
+        color: #DEDCDC;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        margin: 150px auto 36px auto;
+    }
+}
+
