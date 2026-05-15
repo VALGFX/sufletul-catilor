@@ -1,68 +1,438 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Page Title -->
-    <title>Sufletul cărților</title>
-    <!-- Set character set and configure view for mobile devices -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Setting the favicon for the site -->
-    <link rel="icon" type="image/png" href="/assets/images/Favicon.jpg"/>
-    <!-- Connect an external CSS style file -->
-    <link rel="stylesheet" href="/assets/css/style.css">
-        <!-- Hotjar Tracking Code for https://sufletul-catilor.vercel.app/ -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:4957953,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
-</head>
-<body>
-<!-- Site navigation bar -->
-<nav class="navigation">
-    <!-- Navigation logo section -->
-    <div class="nav-logo">
-        <img src="/assets/images/Logo.png" alt="">
-    </div>
-    <!-- Section for navigation links -->
-    <div class="nav-links">
-        <ion-icon name="close-outline" onclick="hideMenu()" class="close-outline" class="close"></ion-icon>
-        <ul>
-            <!-- List items for each page of the site -->
-            <li class="list">
-                <a href="#" class="active">Acasă</a>
-            </li>
-            <li class="list">
-                <a href="/pages/gallery.html">Galerie</a>
-            </li>
-            <li class="list">
-                <a href="#">Activități</a>
-            </li>
-            <li class="list">
-                <a href="/pages/entertainment.html">Cărți | Filme | seriale</a>
-            </li>
-        </ul>
-    </div>
-    <ion-icon name="menu-outline" onclick="showMenu()" class="open"></ion-icon>
-</nav>
-<section class="hero-section">
-    <div class="title">
-        <h1>Bine ați venit în Sufletul cărților</h1>
-    </div>
-    <p class="sub-title">Grup creativ deschis la idei, ascultând cu pasiune și oferind feedback <br> constructiv și
-        plăcut</p>
-    <div class="button"><a href="https://www.instagram.com/thobook?igsh=OW1sc3FpNG9zdGk="
-                           target="_blank">Contactează-ne</a></div>
-</section>
-<footer>© 2024 Sufletul cărților. Toate drepturile rezervate.</footer>
-<script src="/assets/js/menu.js"></script>
-<script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" type="module"></script>
-<script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" type="nomodule"></script>
+<!doctype html>
+<html lang="ro">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Sufletul Cărților – grup creativ de lectură din România. Discutăm cărți, filme și seriale cu pasiune și feedback constructiv."
+		/>
+		<title>Sufletul Cărților</title>
+		<link rel="icon" type="image/jpg" href="/assets/images/Favicon.jpg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="/assets/css/style.css" />
+		<script>
+			;(function (h, o, t, j, a, r) {
+				h.hj =
+					h.hj ||
+					function () {
+						;(h.hj.q = h.hj.q || []).push(arguments)
+					}
+				h._hjSettings = { hjid: 4957953, hjsv: 6 }
+				a = o.getElementsByTagName('head')[0]
+				r = o.createElement('script')
+				r.async = 1
+				r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv
+				a.appendChild(r)
+			})(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=')
+		</script>
+	</head>
+	<body>
+		<div id="progress-bar"></div>
 
-</body>
+		<!-- ===== NAV ===== -->
+		<nav id="nav">
+			<div class="nav-inner">
+				<a href="#acasa" class="nav-logo">
+					<img src="/assets/images/Logo.png" alt="Sufletul Cărților" />
+				</a>
+				<ul class="nav-links" id="nav-links">
+					<li><a href="#acasa" data-section="acasa">Acasă</a></li>
+					<li><a href="#despre" data-section="despre">Despre</a></li>
+					<li>
+						<a href="#biblioteca" data-section="biblioteca">Bibliotecă</a>
+					</li>
+					<li><a href="#galerie" data-section="galerie">Galerie</a></li>
+					<li><a href="#alatura-te" class="nav-cta">Alătură-te</a></li>
+				</ul>
+				<button class="hamburger" id="hamburger" aria-label="Deschide meniu">
+					<span></span><span></span><span></span>
+				</button>
+			</div>
+		</nav>
+		<div class="mobile-overlay" id="mobile-overlay"></div>
+
+		<!-- ===== HERO ===== -->
+		<section id="acasa" class="hero">
+			<div class="hero-bg"></div>
+			<div class="hero-content">
+				<span class="hero-eyebrow">Club de lectură</span>
+				<h1 class="hero-title">Sufletul<br /><em>Cărților</em></h1>
+				<p class="hero-subtitle">
+					Grup creativ deschis la idei, ascultând cu pasiune<br />
+					și oferind feedback constructiv și plăcut
+				</p>
+				<div class="hero-actions">
+					<a href="#biblioteca" class="btn btn-primary"
+						>Explorează Biblioteca</a
+					>
+					<a href="#alatura-te" class="btn btn-outline">Alătură-te nouă</a>
+				</div>
+			</div>
+
+			<div class="hero-quote" id="hero-quote">
+				<blockquote id="hero-quote-text">
+					"O carte bună este cea mai bună prietenă."
+				</blockquote>
+			</div>
+
+			<div class="scroll-hint">
+				<span>Scroll</span>
+				<div class="scroll-line"></div>
+			</div>
+		</section>
+
+		<!-- ===== DESPRE ===== -->
+		<section id="despre" class="about">
+			<div class="container">
+				<div class="about-grid">
+					<div class="about-text reveal">
+						<span class="section-label">Cine suntem</span>
+						<h2>O comunitate construită<br />pe dragostea de povești</h2>
+						<p>
+							Suntem un grup creativ format din pasionați de lectură, filme și
+							seriale, care se reunesc periodic pentru a împărți impresii, a
+							descoperi noi perspective și a cultiva arta conversației
+							autentice.
+						</p>
+						<p>
+							Credem că fiecare carte citită, fiecare film văzut, ne modelează
+							și ne îmbogățește. Feedback-ul nostru este mereu constructiv,
+							atmosfera — mereu caldă.
+						</p>
+						<a href="#alatura-te" class="btn btn-primary">Vino cu noi</a>
+					</div>
+					<div class="stats-grid" id="stats-grid">
+						<div class="stat-card reveal-item">
+							<div class="stat-top">
+								<span class="stat-number" data-target="30">0</span
+								><span class="stat-suffix">+</span>
+							</div>
+							<span class="stat-label">Membri activi</span>
+						</div>
+						<div class="stat-card reveal-item" style="transition-delay: 0.1s">
+							<div class="stat-top">
+								<span class="stat-number" data-target="23">0</span
+								><span class="stat-suffix">+</span>
+							</div>
+							<span class="stat-label">Titluri discutate</span>
+						</div>
+						<div class="stat-card reveal-item" style="transition-delay: 0.2s">
+							<div class="stat-top">
+								<span class="stat-number" data-target="12">0</span
+								><span class="stat-suffix">+</span>
+							</div>
+							<span class="stat-label">Evenimente</span>
+						</div>
+						<div class="stat-card reveal-item" style="transition-delay: 0.3s">
+							<div class="stat-top">
+								<span class="stat-number" data-target="2">0</span
+								><span class="stat-suffix">+</span>
+							</div>
+							<span class="stat-label">Ani de comunitate</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== QUOTES TICKER ===== -->
+		<div class="quotes-band">
+			<div class="quotes-track" id="quotes-track"></div>
+		</div>
+
+		<!-- ===== BIBLIOTECA ===== -->
+		<section id="biblioteca" class="library">
+			<div class="container">
+				<div class="section-header reveal">
+					<span class="section-label">Bibliotecă Digitală</span>
+					<h2>Titluri recomandate<br />de comunitate</h2>
+				</div>
+				<div class="library-filters reveal">
+					<button class="filter-btn active" data-filter="toate">Toate</button>
+					<div class="filter-group">
+						<button class="filter-btn" data-filter="carti">Cărți ▾</button>
+						<div class="filter-dropdown">
+							<button class="filter-sub" data-filter="c_romane">
+								Românești
+							</button>
+							<button class="filter-sub" data-filter="c_universale">
+								Universale
+							</button>
+						</div>
+					</div>
+					<div class="filter-group">
+						<button class="filter-btn" data-filter="filme">Filme ▾</button>
+						<div class="filter-dropdown">
+							<button class="filter-sub" data-filter="f_romane">
+								Românești
+							</button>
+							<button class="filter-sub" data-filter="f_universale">
+								Universale
+							</button>
+						</div>
+					</div>
+					<div class="filter-group">
+						<button class="filter-btn" data-filter="seriale">Seriale ▾</button>
+						<div class="filter-dropdown">
+							<button class="filter-sub" data-filter="s_romane">
+								Românești
+							</button>
+							<button class="filter-sub" data-filter="s_universale">
+								Universale
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="library-grid" id="library-grid"></div>
+			</div>
+		</section>
+
+		<!-- ===== GALERIE ===== -->
+		<section id="galerie" class="gallery">
+			<div class="container">
+				<div class="section-header reveal">
+					<span class="section-label">Galerie</span>
+					<h2>Momente de comuniune</h2>
+					<p>
+						O colecție de amintiri capturate, reflectând clipe de bucurie<br />și
+						conexiuni autentice în cadrul grupului nostru creativ.
+					</p>
+				</div>
+				<div class="gallery-grid">
+					<div class="gallery-item reveal-item" data-label="Recrutarea membri">
+						<img
+							src="/assets/images/gallery/photo%201.jpg"
+							alt="Recrutarea membri"
+							loading="lazy"
+						/>
+						<div class="gallery-overlay"><span>Recrutarea membri</span></div>
+					</div>
+					<div
+						class="gallery-item reveal-item"
+						style="transition-delay: 0.05s"
+						data-label="Recrutarea membri"
+					>
+						<img
+							src="/assets/images/gallery/photo%202.jpg"
+							alt="Recrutarea membri"
+							loading="lazy"
+						/>
+						<div class="gallery-overlay"><span>Recrutarea membri</span></div>
+					</div>
+					<div
+						class="gallery-item reveal-item"
+						style="transition-delay: 0.1s"
+						data-label="Recrutarea membri"
+					>
+						<img
+							src="/assets/images/gallery/photo%203.jpg"
+							alt="Recrutarea membri"
+							loading="lazy"
+						/>
+						<div class="gallery-overlay"><span>Recrutarea membri</span></div>
+					</div>
+					<div
+						class="gallery-item reveal-item"
+						style="transition-delay: 0.15s"
+						data-label="Recrutarea membri"
+					>
+						<img
+							src="/assets/images/gallery/photo%204.jpg"
+							alt="Recrutarea membri"
+							loading="lazy"
+						/>
+						<div class="gallery-overlay"><span>Recrutarea membri</span></div>
+					</div>
+					<div
+						class="gallery-item reveal-item"
+						style="transition-delay: 0.2s"
+						data-label="Recrutarea membri"
+					>
+						<img
+							src="/assets/images/gallery/photo%205.jpg"
+							alt="Recrutarea membri"
+							loading="lazy"
+						/>
+						<div class="gallery-overlay"><span>Recrutarea membri</span></div>
+					</div>
+					<div
+						class="gallery-item reveal-item"
+						style="transition-delay: 0.25s"
+						data-label="Recrutarea membri"
+					>
+						<img
+							src="/assets/images/gallery/photo%206.jpg"
+							alt="Recrutarea membri"
+							loading="lazy"
+						/>
+						<div class="gallery-overlay"><span>Recrutarea membri</span></div>
+					</div>
+					<div
+						class="gallery-item gallery-item--wide reveal-item"
+						style="transition-delay: 0.3s"
+						data-label="Recrutarea membri"
+					>
+						<img
+							src="/assets/images/gallery/photo%207.jpg"
+							alt="Recrutarea membri"
+							loading="lazy"
+						/>
+						<div class="gallery-overlay"><span>Recrutarea membri</span></div>
+					</div>
+					<div
+						class="gallery-item reveal-item"
+						style="transition-delay: 0.35s"
+						data-label="Recrutarea membri"
+					>
+						<img
+							src="/assets/images/gallery/photo%208.jpg"
+							alt="Recrutarea membri"
+							loading="lazy"
+						/>
+						<div class="gallery-overlay"><span>Recrutarea membri</span></div>
+					</div>
+					<div
+						class="gallery-item reveal-item"
+						style="transition-delay: 0.4s"
+						data-label="Masa rotundă"
+					>
+						<img
+							src="/assets/images/gallery/photo%209.jpg"
+							alt="Masa rotundă"
+							loading="lazy"
+						/>
+						<div class="gallery-overlay"><span>Masa rotundă</span></div>
+					</div>
+					<div
+						class="gallery-item reveal-item"
+						style="transition-delay: 0.45s"
+						data-label="Masa rotundă"
+					>
+						<img
+							src="/assets/images/gallery/photo%2010.jpg"
+							alt="Masa rotundă"
+							loading="lazy"
+						/>
+						<div class="gallery-overlay"><span>Masa rotundă</span></div>
+					</div>
+					<div
+						class="gallery-item reveal-item"
+						style="transition-delay: 0.5s"
+						data-label="Masa rotundă"
+					>
+						<img
+							src="/assets/images/gallery/photo%2012.jpg"
+							alt="Masa rotundă"
+							loading="lazy"
+						/>
+						<div class="gallery-overlay"><span>Masa rotundă</span></div>
+					</div>
+					<div
+						class="gallery-item reveal-item"
+						style="transition-delay: 0.55s"
+						data-label="Poză de grup"
+					>
+						<img
+							src="/assets/images/gallery/photo%2011.jpg"
+							alt="Poză de grup"
+							loading="lazy"
+						/>
+						<div class="gallery-overlay"><span>Poză de grup</span></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== ALATURA-TE ===== -->
+		<section id="alatura-te" class="join">
+			<div class="container">
+				<div class="join-inner reveal">
+					<span class="section-label">Alătură-te</span>
+					<h2>Fii parte din<br /><em>Sufletul Cărților</em></h2>
+					<p>
+						Dacă iubești cărțile, filmele sau serialele și vrei să faci parte
+						dintr-o comunitate caldă și creativă, te așteptăm cu brațele
+						deschise.
+					</p>
+					<a
+						href="https://www.instagram.com/thobook?igsh=OW1sc3FpNG9zdGk="
+						target="_blank"
+						rel="noopener"
+						class="btn btn-primary btn-large"
+					>
+						<svg
+							width="20"
+							height="20"
+							viewBox="0 0 24 24"
+							fill="currentColor"
+							aria-hidden="true"
+						>
+							<path
+								d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+							/>
+						</svg>
+						Urmărește-ne pe Instagram
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== FOOTER ===== -->
+		<footer>
+			<div class="footer-inner">
+				<div class="footer-logo">
+					<img src="/assets/images/Logo.png" alt="Sufletul Cărților" />
+				</div>
+				<p>© 2024 Sufletul Cărților. Toate drepturile rezervate.</p>
+				<nav class="footer-links" aria-label="Footer navigation">
+					<a href="#acasa">Acasă</a>
+					<a href="#despre">Despre</a>
+					<a href="#biblioteca">Bibliotecă</a>
+					<a href="#galerie">Galerie</a>
+				</nav>
+			</div>
+		</footer>
+
+		<!-- ===== LIGHTBOX ===== -->
+		<div
+			id="lightbox"
+			class="lightbox"
+			role="dialog"
+			aria-modal="true"
+			aria-label="Imagine mărită"
+		>
+			<button class="lightbox-close" id="lightbox-close" aria-label="Închide">
+				&times;
+			</button>
+			<button
+				class="lightbox-nav lightbox-prev"
+				id="lightbox-prev"
+				aria-label="Anterioară"
+			>
+				&#8249;
+			</button>
+			<div class="lightbox-content">
+				<img id="lightbox-img" src="" alt="" />
+				<p id="lightbox-label"></p>
+			</div>
+			<button
+				class="lightbox-nav lightbox-next"
+				id="lightbox-next"
+				aria-label="Următoarea"
+			>
+				&#8250;
+			</button>
+		</div>
+
+		<!-- ===== BACK TO TOP ===== -->
+		<button id="back-to-top" aria-label="Înapoi sus">↑</button>
+
+		<script src="/assets/js/main.js"></script>
+	</body>
 </html>
